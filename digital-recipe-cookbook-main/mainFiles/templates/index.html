@@ -1,0 +1,264 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/aiPageStyles.css">
+    <title>Digital Recipe Book</title>
+</head>
+<body>
+  
+  <div class="container">
+
+    <!-- This is the title and navbar which will be done by anand -->
+    <section class="one">
+      <div class="main-name">
+        <h1>Digital Recipe Book</h1>
+      </div>
+    </section>
+
+    <!-- This is the drink section done by alok -->
+    <section class="three">
+        <div class="wholeDrinks">
+            <div class="heading">
+                <h2>BEVERAGERS</h2>
+            </div>
+            <div class="carousel-nav-drinks"
+                data-flickity='{ "asNavFor": ".carousel-main-drinks",
+                "contain": true,
+                "autoPlay": true,
+                "pageDots": false,
+                "wrapAround": true,
+                "groupCells":2 }'>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+            </div>
+    
+    
+            <!-- Flickity HTML init -->
+            <div class="carousel-main-drinks" data-flickity='{"wrapAround": true}'>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- This is the horizontal scrolling recipe section which will be done by alok -->
+    <section class="two">
+        <div class="whole">
+            <div class="heading">
+                <h2>CLAY POT COOKERY</h2>
+            </div>
+            <div class="carousel-nav"
+                 data-flickity='{ "asNavFor": ".carousel-main",
+             "contain": true,
+             "autoPlay": true,
+             "pageDots": false,
+             "wrapAround": true,
+             "groupCells":2 }'>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+            </div>
+    
+    
+            <!-- Flickity HTML init -->
+            <div class="carousel-main" data-flickity='{"wrapAround": true}'>
+                <div class="carousel-cell-main"></div>
+                <div class="carousel-cell-main"></div>
+                <div class="carousel-cell-main"></div>
+                <div class="carousel-cell-main"></div>
+                <div class="carousel-cell-main"></div>
+                <div class="carousel-cell-main"></div>
+                <div class="carousel-cell-main"></div>
+                <div class="carousel-cell-main"></div>
+                <div class="carousel-cell-main"></div>
+                <div class="carousel-cell-main"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- This is the AI recommendation section which will be done by anand -->
+    <section class="four" style=" background-image: url('/static/images/images.jpeg');
+          background-size: cover; 
+          background-position: center; ">
+        <div class="top-row">
+            <div class="box" id="one" style="
+        background: rgba(255, 255, 255, 0.2); 
+        padding: 10px;
+    "><q style="text-shadow: 4px 4px 8px #000; font-weight: 600; font-family: Algerian; text-align: center; font-size: 1.2em; font-style: italic; padding: 10px; background: rgba(255, 255, 255, 0.0); padding: 10px; text-align: center; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); color: #ffffff;  ">A recipe has no soul. As a cook you must give soul to the recipe</q></div>
+            <div class="box" id="two" style="
+        background: rgba(255, 255, 255, 0.2); 
+        padding: 10px;
+    ">
+                <form action="" method="post" id="aiForm">
+                    {% csrf_token %}
+                    <center>
+                        <p style="text-shadow: 4px 4px 8px #000; font-weight: 600; font-family: 'Algerian'; text-align: center; font-size: 2.8em; font-style: italic; padding: 10px; background: rgba(255, 255, 255, 0.0); padding: 10px; text-align: center; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); color: #ffffff;  ">AI recommended Recipies</p>
+                        <p style="text-shadow: 4px 4px 8px #000; font-weight: 600; font-family: 'Times New Roman'; text-align: center; font-size: 2.2em; font-style: italic; padding: 10px; background: rgba(255, 255, 255, 0.0); padding: 10px; text-align: center; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); color: #ffffff; ">Enter your prompt</p>
+                        {{ form }}
+
+                        <button type="submit" class="submit-button" role="button">Generate</button>
+                    </center>
+                </form>
+            </div>
+        </div>
+        <div class="bottom-row">
+            <!-- {% if result_text %} -->
+            <div class="box" id="three" style="
+        background: rgba(255, 255, 255, 0.4); 
+        padding: 10px;
+    ">
+                <h2 id="recipeNameAndIngredients"></h2>
+                <ul id="ingredientList"></ul>
+            </div>
+            <div class="box" id="four" style="
+        background: rgba(255, 255, 255, 0.4); 
+        padding: 10px;
+    ">
+                <h2 id="steps-name-title">Recipe:</h2>
+                <ol id="stepList"></ol>
+            </div>
+            <!-- {% endif %} -->
+        </div>
+    </section>
+    
+    <!-- This is the review and footer section which will be done by  akrity-->
+    <section class="five">
+        <div class="five-page">
+            <div class="upper-side">
+                <h1>Your feedback is important to us!</h1>
+                <div class="down-part">
+                    <div class="first-box">
+                        <div class="para1">    
+                            <!--  comment section is pending to add comment ,name photo  -->
+                            <p>Usually when I get a cookbook or magazine, I am only interested in a few of the recipes. Either they don't fit my diet or tastes, but I could see myself making most of these. I also appreciate that the recipes are explained well.</p>
+                        </div>
+                        <div class="photo1-section">
+                            <img src="static/icons/review-pic1.jpg" >
+                            <p>Linda M</p>
+                        </div>
+                    </div>
+                    <div class="second-box">
+                        <div class="para2">
+                            <p>I like Allrecipes magazine, and have made several of the recipes in the issues. I decided to try the kindle version on trial subscription and get subscription later. I love my kindle for reading books, but did not like having the magazine on it.</p>
+                        </div>
+                        <div class="photo2-section">
+                            <img src="static/icons/review-pic2.jpg">
+                            <p>Darling Nikki</p>
+                        </div>
+                    </div>
+                    <div class="third-box">
+                        <div class="para3">
+                            <p>This is one of my favorite food magazines. I have bought so many issues twice, I started taking pictures of the cover so I won't buy it again. As a matter of fact, even though I have this last issue in my newsstand, I accidentally purchased a hard copy.</p>
+                        </div>
+                        <div class="photo3-section">
+                            <img src="static/icons/review-pic3.jpg">
+                            <p>Viki Lee Butler</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lower-side">
+                    <div class="left-side">
+                        <p>We have high standards <br> for emails too.</p>
+                    </div>
+                <div class="right-side">
+                    <div> 
+                        <a href="signup/">
+                            <input class="btn" type="submit" value="Subscribe">
+                        </a>
+                    </div>
+                    <div class="navbar">
+                        <p><a href="https://www.facebook.com/">
+                            <img class="first-image" src="static/icons/facebook.jpg" style="width: 100%;
+                            height: 40px;
+                            border-radius: 50%;
+                            box-shadow: 1px 1px 10px rgb(31, 31, 225);">
+                        </a></p>
+                        <p><a href="https://www.instagram.com/">
+                            <img class="second-image" src="static/icons/instagram.jpg" style="width: 100%;
+                            height: 40px;
+                            border-radius: 50%;
+                            box-shadow: 1px 1px 10px rgb(255, 50, 200);">
+                        </a></p>
+                        <p><a href="https://www.tweeter.com/">
+                            <img class="third-image" src="static/icons/twitter.png" style="width: 100%;
+                            height: 40px;
+                            border-radius: 50%;
+                            box-shadow: 1px 1px 10px rgb(37, 168, 249);">
+                        </a></p>
+                        <p><a href="https://www.youtube.com/">
+                            <img class="four-image" src="static/icons/youtube.png" style="width: 100%;
+                            height: 40px;
+                            border-radius: 12px;
+                            box-shadow: 1px 1px 10px rgb(250, 43, 43);"></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+  </div>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <!--Next two lines are for using the flicketry Plugin for carousel-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+  <script src="{% static 'java-meal.js' %}"></script>
+  <script src="{% static 'java-drinks.js' %}"></script>
+  <script src="{% static 'aiRecom.js' %}" defer></script>
+  {{ result_text|json_script:'results' }}
+
+</body>
+</html>

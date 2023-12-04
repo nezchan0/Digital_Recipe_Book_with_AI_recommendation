@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* whole screen code */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;  height: -webkit-fill-available; height: fill-available;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+/* Anand css code section     1st page */
+.one h1{
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 4px white;
+}
+
+h1{
+    text-shadow: 1px 1px 4px #000;
+}
+.one{
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #d6b9c3 0%, #B5FFFC 100%);
+    position: relative;
+}
+.one:before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.6;
+    background-image: url('/static/images/first_page_background.webp');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+.main-name{
+    font-size: 100px;
+    position: relative;
+}
+
+/* Alok css code meal     2nd page*/
+.two{
+    background-image: linear-gradient(45deg, #cbbecb 0%, #b4cfd2 100%);
+    position: relative;
+}
+.two:before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.4;
+    background-image: url('/static/images/second_third-image.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+.whole {
+    width: 100%;
+    height: auto;
+    background-color: #f0f0f0;
+    margin: 7px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 6px rgb(106, 1, 1);
+}
+.flickity-button {
+    background: transparent;
+}
+.heading{
+    background-color: transparent;
+    position: relative;
+}
+.heading h2{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    color:  rgb(0, 0, 0) ;
+    text-shadow: 1px 1px 10px rgb(0, 0, 0);
+}
+
+.carousel-nav{
+    width: 100%;
+    height: auto;
+}
+.carousel-cell {
+    width: 20vw;
+    height: 20vh;
+    box-shadow: 1px 1px 30px black;
+}
+.carousel-cell img {
+    width: 100%;               /* Make the image fill the entire width of the cell */
+    height:100%;               /* Maintain the aspect ratio */
+    border-radius: 20px;
+    box-shadow: 1px 1px 9px black;
+}
+.carousel-cell  img:hover {
+    box-shadow: 1px 1px 80px rgb(93, 28, 20);
+    transform: translateY(-10px);
+}
+.carousel-cell h1 {
+    position: absolute; 
+    font-size:25px;       
+     /* Adjust this value to control the distance from the top */
+    right: 20%;               /* Adjust this value to control the distance from the left */
+    text-align: center;
+    color: #fff;               /* Set the text color to white */
+    z-index: 1;               /* Ensure the text appears above the image */
+    font-weight: 500;
+    text-shadow: -2px -2px 2px #000, 2px -2px 2px #000, -2px 2px 2px #000, 2px 2px 2px #000;          /* Black border */
+}
+.carousel-main{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 10px;
+}
+.carousel-cell-main {
+    width: 100%;
+    height: 450px;
+    background: transparent;
+    border-radius: 5px;
+    /* Add the following styles for horizontal layout */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;         /* Ensures that the image won't exceed the cell boundaries */
+    position: relative;         /* Position relative for absolute positioning of text */
+}
+.parent-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.85;
+    box-shadow: 1px 1px 7px black;
+}
+/* Style for the left box */
+.left-box {
+    width:30%;
+    height:100%;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    border-radius: 10px;
+    font-weight: 1000;
+    
+}
+.left-box h3{
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px rgb(0, 0, 0);
+}
+.left-box img {
+    width: 100%;       /* Make sure the image doesn't exceed its container */
+    height:60%;
+    align-items: center;
+    /* opacity: 1; */
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px black;
+}
+.left-box  img:hover {
+    box-shadow: 1px 1px 60px rgb(0, 0, 0);
+    transform: translateY(-10px);
+}
+/* Style for the middle box */
+.middle-box {
+    width: 35%;
+    height: 100%;
+    background: transparent;
+    margin-left: 50px;
+    text-align: left;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #FFDEE9;
+    background-image: linear-gradient(45deg, #B5FFFC 0%, #FFDEE9 100%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px black;
+    overflow: scroll;
+}
+.middle-box:hover {
+    box-shadow: 1px 1px 60px rgb(0, 0, 0);
+    transform: translateY(-10px);
+}
+.middle-box::-webkit-scrollbar {
+    display: none;
+}
+/* Style for the right box */
+.right-box {
+    width: 35%;
+    height: 100%;
+    margin-left: 50px;
+    text-align: left;
+    font-size: 20px;
+    padding: 5px;
+    background-color: #FFDEE9;
+    background-image: linear-gradient(45deg, #FFDEE9 0%, #B5FFFC 100%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px black;
+    overflow: scroll;
+}
+.right-box:hover {
+    box-shadow: 1px 1px 60px rgb(0, 0, 0);
+    transform: translateY(-10px);
+}
+.right-box::-webkit-scrollbar {
+    display: none;
+}
+/* Additional styling for h1 and p elements */
+:is(.left-box, .middle-box, .right-box) h1 {
+    margin: 20px;   /* Adjust the margin as needed */
+}
+:is(.left-box, .middle-box, .right-box) p {
+    margin: 20px;          /* Adjust the margin as needed */
+}
+
+/* Alok css code drink   3rd page */
+.three{
+    background-image: linear-gradient(45deg, #cbbecb 0%, #b4cfd2 100%);
+    position: relative;
+}
+.three:before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.6;
+    background-image: url('/static/images/drinks-image.webp');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+.wholeDrinks {
+    width: 100%;
+    height: auto;
+    background-color: #f0f0f0;
+    margin: 7px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 6px rgb(106, 1, 1);
+}
+.carousel-nav-drinks{
+    width: 100%;
+    height: auto;
+}
+.carousel-cell-drinks {
+    width: 20vw;
+    height: 20vh;
+    box-shadow: 1px 1px 30px black;
+}
+.carousel-cell-drinks img {
+    width: 100%;               /* Make the image fill the entire width of the cell */
+    height:100%;               /* Maintain the aspect ratio */
+    border-radius: 20px;
+    box-shadow: 1px 1px 9px black;
+}
+.carousel-cell-drinks  img:hover {
+    box-shadow: 1px 1px 80px rgb(93, 28, 20);
+    transform: translateY(-10px);
+}
+.carousel-cell-drinks h1 {
+    position: absolute; 
+    font-size:25px;       
+     /* Adjust this value to control the distance from the top */
+    right: 20%;               /* Adjust this value to control the distance from the left */
+    text-align: center;
+    color: #fff;               /* Set the text color to white */
+    z-index: 1;               /* Ensure the text appears above the image */
+    font-weight: 500;
+    text-shadow: -2px -2px 2px #000, 2px -2px 2px #000, -2px 2px 2px #000, 2px 2px 2px #000;          /* Black border */
+}
+.carousel-main-drinks{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 10px;
+}
+.carousel-cell-main-drinks {
+    width: 100%;
+    height: 450px;
+    background: transparent;
+    border-radius: 5px;
+    /* Add the following styles for horizontal layout */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;         /* Ensures that the image won't exceed the cell boundaries */
+    position: relative;         /* Position relative for absolute positioning of text */
+}
+.parent-box-drinks {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.85;
+    box-shadow: 1px 1px 7px black;
+}
+/* Style for the left box */
+.left-box-drinks {
+    width:30%;
+    height:100%;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    border-radius: 10px;
+    font-weight: 1000;
+    
+}
+.left-box-drinks h3{
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px rgb(0, 0, 0);
+}
+.left-box-drinks img {
+    width: 100%;       /* Make sure the image doesn't exceed its container */
+    height:60%;
+    align-items: center;
+    /* opacity: 1; */
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px black;
+}
+.left-box-drinks  img:hover {
+    box-shadow: 1px 1px 60px rgb(0, 0, 0);
+    transform: translateY(-10px);
+}
+/* Style for the middle box */
+.middle-box-drinks {
+    width: 35%;
+    height: 100%;
+    background: transparent;
+    margin-left: 50px;
+    text-align: left;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #FFDEE9;
+    background-image: linear-gradient(45deg, #B5FFFC 0%, #FFDEE9 100%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px black;
+    overflow: scroll;
+}
+.middle-box-drinks:hover {
+    box-shadow: 1px 1px 60px rgb(0, 0, 0);
+    transform: translateY(-10px);
+}
+.middle-box-drinks::-webkit-scrollbar {
+    display: none;
+}
+/* Style for the right box */
+.right-box-drinks {
+    width: 35%;
+    height: 100%;
+    margin-left: 50px;
+    text-align: left;
+    font-size: 20px;
+    padding: 5px;
+    background-color: #FFDEE9;
+    background-image: linear-gradient(45deg, #FFDEE9 0%, #B5FFFC 100%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px black;
+    overflow: scroll;
+}
+.right-box-drinks:hover {
+    box-shadow: 1px 1px 60px rgb(0, 0, 0);
+    transform: translateY(-10px);
+}
+.right-box-drinks::-webkit-scrollbar {
+    display: none;
+}
+/* Additional styling for h1 and p elements */
+:is(.left-box-drinks, .middle-box-drinks, .right-box-drinks) h1 {
+    margin: 20px;   /* Adjust the margin as needed */
+}
+:is(.left-box-drinks, .middle-box-drinks, .right-box-drinks) p {
+    margin: 20px;          /* Adjust the margin as needed */
+}
+
+/* Akrity css code */
+.five{
+    background-image: linear-gradient(45deg, #d7c0d7 0%, #bfd5d7 100%);
+}
+.five-page{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+.five-page:before{
+    content: ' ';
+    width: 100%;
+    height: 100vh;
+    display: block;
+    position: absolute;
+    float: left;
+    opacity: 0.15;
+    background-image: url('/static/images/fifth-image.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+.upper-side{
+width: 80%;
+height: 100vh;
+float: left;
+margin-top: 40px;
+border: 3px solid #aed3d7;
+box-shadow: -10px -9px 10px rgb(203, 116, 171);
+text-align: center;
+}
+.upper-side h1{
+padding: 18px;
+font-size: 2.2vw;
+font-weight: bolder;
+text-shadow: 1px 1px 4px #000;
+align-items: center;
+}
+.down-part{
+
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+/* flex-wrap: wrap; */
+}
+
+:is(.first-box, .second-box, .third-box){
+width: 25vw;
+height: 50vh;
+float: left;
+border: 3px solid #aed3d7;
+box-shadow: 10px 9px 10px rgb(189, 140, 171);
+}
+:is(.para1, .para2, .para3){
+padding: 10px 10px 60px 10px;
+text-align: left;
+font-size:1.29vw;
+font-weight: bold;
+}
+:is(.first-box .photo1-section, .second-box .photo2-section, .third-box .photo3-section){
+float: left;
+display: flex;
+flex-direction: row;
+}
+
+:is(.first-box .photo1-section, .second-box .photo2-section, .third-box .photo3-section) img{
+width: 15%;
+height: 20%;
+float: left;
+margin-left: 10px;
+border-radius: 50%;
+box-shadow: 1px 1px 10px rgb(31, 31, 36);
+}
+
+:is(.first-box .photo1-section, .second-box .photo2-section, .third-box .photo3-section) p{
+padding-left: 20px;
+float: left;
+font-size: 1.6vw;
+}
+
+.lower-side{
+width: 100%;
+height: auto;
+margin-top: 50px;
+border: 2px solid #d7c0d7;
+position: relative;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+box-shadow: 10px 3px 20px rgb(207, 11, 161);
+}
+.left-side {
+    font-size: 2.5vw;
+    font-weight: bolder;
+    padding-top: 40px;
+    text-shadow: 1px 1px 10px #8d8585;
+    display: flex;
+    flex-direction: column;
+
+}
+.right-side{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+input[type="submit"], textarea{
+    padding: 10px;
+    font-size: 2vw;
+    font-weight: 500;
+    text-shadow: 1px 1px ;
+    cursor: pointer;
+    background-color: #f10000;
+    border: 2px solid #dd9393;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgb(102, 98, 98);
+}
+.right-side input:hover {
+    box-shadow: 5px 8px 10px rgb(78, 23, 17);
+    transform: translateY(-3px);
+}
+.navbar{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} 
+.navbar p{
+    padding: 5px;
+}
+.right-side .navbar img:hover {
+    box-shadow: 5px 8px 10px rgb(0, 0, 0);
+    transform: translateY(10px);
+}
+@media screen and (max-width:900px) {
+    .container,.one,.one:before,.main-name,.two,.three,.four,.five,.upper-side,.down-part,.first-box, .second-box, .third-box,.para1, .para2, .para3,.photo1-section,.photo2-section,.photo3-section,.lower-side,.left-side,.right-side,.navbar{
+        width: 100%;
+        /* float: left;flex-direction: column; */
+}
+}
