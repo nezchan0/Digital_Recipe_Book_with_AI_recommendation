@@ -40,4 +40,4 @@ This is more than just a recipe book; it's a platform for culinary exploration, 
 ### HOW TO RUN THE SERVER
 1. Open command prompt and go to the project directory
 2. Then write 'python manage.py runserver' and open the localhost web page.
-3. To apply the emailing functionality write 'python manage.py my_script' it will run the script to fetch data from the database and send the email through brevo enailing API.
+3. To apply the emailing functionality write 'python manage.py my_script' it will run the script to fetch data from the database and send the email through brevo emailing API.
