@@ -36,3 +36,8 @@ Stay connected with RecipeX by subscribing to our mailing service powered by Bre
    - Connect with fellow food enthusiasts by sharing your culinary discoveries.
 
 This is more than just a recipe book; it's a platform for culinary exploration, innovation, and community engagement. Join us on this gastronomic journey, and let the flavors unfold!
+
+### HOW TO RUN THE SERVER
+1. Open command prompt and go to the project directory
+2. Then write 'python manage.py runserver' and open the localhost web page.
+3. To apply the emailing functionality write 'python manage.py my_script' it will run the script to fetch data from the database and send the email through brevo enailing API.
